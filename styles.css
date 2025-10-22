@@ -1,0 +1,172 @@
+/* ===============================
+   تنظیمات پایه
+=============================== */
+body {
+  font-family: "Tahoma", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a, nav button {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+main {
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   فرم‌ها در editor.html
+=============================== */
+form#portfolioForm {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+form#portfolioForm fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+form#portfolioForm label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+form#portfolioForm input,
+form#portfolioForm textarea,
+form#portfolioForm button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form#portfolioForm button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#portfolioForm button:hover {
+  background-color: #005fa3;
+}
+
+/* مهارت‌ها و پروژه‌ها */
+#skillsContainer input,
+#projectsContainer input,
+#projectsContainer textarea {
+  margin-bottom: 0.5rem;
+}
+
+/* لینک ساخته شده */
+#linkContainer a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0077cc;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ===============================
+   نمایش پورتفولیو در view.html
+=============================== */
+#portfolioContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+#portfolioContent h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+#portfolioContent p {
+  line-height: 1.5;
+}
+
+#portfolioContent section {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+#portfolioContent ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.project {
+  margin-bottom: 1rem;
+}
+
+.project a {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+/* ===============================
+   واکنش‌گرا
+=============================== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  form#portfolioForm input,
+  form#portfolioForm textarea,
+  form#portfolioForm button {
+    font-size: 0.9rem;
+  }
+
+  #portfolioContent h2 {
+    font-size: 1.4rem;
+  }
+
+  #portfolioContent h3 {
+    font-size: 1rem;
+  }
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.dark-mode input, .dark-mode textarea, .dark-mode button {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #555;
+}

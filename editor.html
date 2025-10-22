@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ویرایش پورتفولیو — پورتفولیو ساز</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/editor.css">
+
+
+</head>
+<body>
+  <header>
+    <h1>ویرایش پورتفولیو</h1>
+    <nav aria-label="ناوبری کاربر">
+      <a id="homeLink" href="index.html">خانه</a>
+      <button id="logoutBtn">خروج</button>
+    </nav>
+    <div id="welcomeMsg" aria-live="polite"></div>
+  </header>
+
+  <main>
+    <section aria-labelledby="editorTitle">
+      <h2 id="editorTitle">مشخصات و پروژه‌های خود را وارد کن</h2>
+
+      <form id="portfolioForm" novalidate>
+        <fieldset>
+          <legend>اطلاعات پایه</legend>
+          <div>
+            <label for="usernameInput">نام کاربری</label>
+            <input id="usernameInput" type="text" required aria-required="true" />
+          </div>
+
+          <div>
+            <label for="fullNameInput">نام کامل</label>
+            <input id="fullNameInput" type="text" required aria-required="true" />
+          </div>
+
+          <div>
+            <label for="titleInput">عنوان / تخصص</label>
+            <input id="titleInput" type="text" />
+          </div>
+
+          <div>
+            <label for="bioInput">درباره من</label>
+            <textarea id="bioInput" rows="4" required aria-required="true"></textarea>
+          </div>
+
+          <div>
+            <label for="emailInput">ایمیل</label>
+            <input id="emailInput" type="email" required aria-required="true" />
+          </div>
+
+          <div>
+            <label for="phoneInput">شماره تماس</label>
+            <input id="phoneInput" type="tel" />
+          </div>
+
+          <div>
+            <label for="websiteInput">وب‌سایت / لینک شخصی</label>
+            <input id="websiteInput" type="url" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>مهارت‌ها</legend>
+          <div id="skillsContainer">
+            <!-- مهارت‌ها دینامیک اضافه می‌شوند -->
+          </div>
+          <button type="button" id="addSkillBtn">افزودن مهارت</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>پروژه‌ها</legend>
+          <div id="projectsContainer">
+            <!-- پروژه‌ها دینامیک اضافه می‌شوند -->
+          </div>
+          <button type="button" id="addProjectBtn">افزودن پروژه</button>
+        </fieldset>
+
+        <div>
+          <button type="button" id="generateLinkBtn">ساخت لینک</button>
+        </div>
+      </form>
+
+      <div id="linkContainer" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/auth.js" defer></script>
+  <script src="js/editor.js" defer></script>
+</body>
+</html>
+>

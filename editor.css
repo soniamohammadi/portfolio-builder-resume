@@ -1,0 +1,212 @@
+/* --------------------
+   استایل صفحه ویرایش پورتفولیو
+   -------------------- */
+
+/* رنگ‌های اصلی */
+:root {
+  --first-color: #394a51;
+  --second-color: #7fa99b;
+  --third-color: #fbf2d5;
+  --fourth-color: #fdc57b;
+  --text-dark: #1e1e1e;
+  --text-light: #fdfdfd;
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: "Vazir", sans-serif;
+  background-color: var(--third-color);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* ---------- هدر ---------- */
+header {
+  background-color: var(--first-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+header nav a,
+header nav button {
+  color: var(--text-light);
+  text-decoration: none;
+  margin-left: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+header nav a:hover,
+header nav button:hover {
+  color: var(--fourth-color);
+}
+
+/* ---------- ساختار کلی ---------- */
+main {
+  max-width: 850px;
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: var(--first-color);
+  border-bottom: 2px solid var(--second-color);
+  padding-bottom: 0.4rem;
+  font-size: 1.2rem;
+}
+
+/* ---------- فرم ---------- */
+form fieldset {
+  border: 1px solid var(--second-color);
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  background-color: var(--third-color);
+}
+
+form legend {
+  font-weight: bold;
+  color: var(--first-color);
+  padding: 0 0.5rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color var(--transition);
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--second-color);
+  outline: none;
+}
+
+/* ---------- دکمه‌ها ---------- */
+button {
+  background-color: var(--second-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--first-color);
+}
+
+/* ---------- لینک ساخته‌شده ---------- */
+#linkContainer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+#linkContainer a {
+  display: inline-block;
+  background-color: var(--fourth-color);
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+#linkContainer a:hover {
+  background-color: var(--second-color);
+  color: var(--text-light);
+}
+
+/* ---------- پروژه‌ها ---------- */
+.projectInput {
+  background: #fff;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.projectInput input {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- حالت شب ---------- */
+.dark-mode {
+  background-color: #222;
+  color: var(--text-light);
+}
+
+.dark-mode main {
+  background-color: #333;
+  color: var(--text-light);
+}
+
+.dark-mode header {
+  background-color: #111;
+}
+
+.dark-mode form fieldset {
+  background-color: #2b2b2b;
+  border-color: #555;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #444;
+  color: #eee;
+  border: 1px solid #666;
+}
+
+.dark-mode button {
+  background-color: var(--fourth-color);
+  color: #222;
+}
+
+/* ---------- واکنش‌گرا ---------- */
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav a,
+  header nav button {
+    margin: 0.3rem 0;
+  }
+}

@@ -1,0 +1,186 @@
+/* css/view.css */
+
+/* رنگ‌ها و فونت‌ها */
+:root {
+  --primary-color: #394a51;
+  --secondary-color: #7fa99b;
+  --accent-color: #fdc57b;
+  --bg-color: #fbf2d5;
+  --card-bg: #fff;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header nav a {
+  color: var(--accent-color);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* پروفایل اصلی */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.profile-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.profile-header .profile-info h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.profile-header .profile-info h3 {
+  font-size: 1.3rem;
+  margin: 0.3rem 0 0;
+  color: var(--secondary-color);
+}
+
+.profile-header .profile-info p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* بخش‌ها */
+section {
+  background-color: var(--card-bg);
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+section h4 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+}
+
+/* مهارت‌ها */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.skills li img {
+  width: 18px;
+  height: 18px;
+}
+
+/* پروژه‌ها */
+.project {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.project h5 {
+  margin-top: 0;
+  color: var(--secondary-color);
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* اطلاعات تماس */
+.contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-header .profile-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .profile-header .profile-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+}

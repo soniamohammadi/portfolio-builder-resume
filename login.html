@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ورود — پورتفولیو ساز</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <header>
+    <h1>ورود</h1>
+    <nav aria-label="منوی صفحات">
+      <a href="index.html">خانه</a> |
+      <a href="signup.html">ثبت‌نام</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="loginTitle">
+      <h2 id="loginTitle">وارد حساب خود شوید</h2>
+
+      <form id="loginForm" autocomplete="on" novalidate>
+        <div>
+          <label for="loginUsername">نام کاربری</label>
+          <input id="loginUsername" name="username" type="text" required aria-required="true" />
+        </div>
+
+        <div>
+          <label for="loginPassword">رمز عبور</label>
+          <input id="loginPassword" name="password" type="password" required aria-required="true" />
+        </div>
+
+        <div>
+          <button type="submit">ورود</button>
+          <button type="button" id="toSignup">ثبت‌نام</button>
+        </div>
+
+        <div id="loginError" role="alert" aria-live="assertive" style="color:red"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

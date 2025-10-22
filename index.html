@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پورتفولیو‌ساز | Portfolio Builder</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <style>
+    /* رنگ‌ها */
+    :root {
+      --first-color: #394a51;
+      --second-color: #7fa99b;
+      --third-color: #fbf2d5;
+      --fourth-color: #fdc57b;
+    }
+
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--third-color);
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    header {
+      background-color: var(--first-color);
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0.2rem 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: var(--fourth-color);
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Hero Section */
+    .hero {
+      background-color: var(--second-color);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero button {
+      background-color: var(--first-color);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: var(--fourth-color);
+      color: var(--first-color);
+    }
+
+    /* ویژگی‌ها */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .feature-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      flex: 1 1 250px;
+      max-width: 300px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      color: var(--first-color);
+    }
+
+    .feature-card p {
+      margin-bottom: 0;
+      color: #555;
+    }
+
+    /* Buttons */
+    button {
+      background-color: var(--first-color);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: var(--fourth-color);
+      color: var(--first-color);
+    }
+
+    /* خوش‌آمد شخصی */
+    #welcomeSection {
+      background-color: var(--fourth-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      display: none;
+    }
+
+    /* فوتر */
+    footer {
+      background-color: var(--first-color);
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>پورتفولیو‌ساز</h1>
+    <p>بساز، ویرایش کن و لینک اختصاصی پورتفولیوی خودت را دریافت کن</p>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero" id="authSection">
+      <h2>درود! 👋</h2>
+      <p>برای شروع، وارد شوید یا حساب جدید بسازید:</p>
+      <button id="loginBtn">ورود</button>
+      <button id="signupBtn">ثبت‌نام</button>
+    </div>
+
+    <div id="welcomeSection">
+      <h2 id="welcomeMessage"></h2>
+      <p>می‌توانید وارد محیط ویرایشگر شوید:</p>
+      <button id="goEditorBtn">رفتن به ویرایشگر</button>
+      <button id="logoutBtn">خروج</button>
+    </div>
+
+    <!-- ویژگی‌ها -->
+    <div class="features">
+      <div class="feature-card">
+        <h3>ساخت پورتفولیو</h3>
+        <p>ایجاد پروفایل شخصی با اطلاعات و پروژه‌های شما</p>
+      </div>
+      <div class="feature-card">
+        <h3>نمایش پروژه‌ها</h3>
+        <p>پروژه‌ها و مهارت‌هایتان را به شکل حرفه‌ای نمایش دهید</p>
+      </div>
+      <div class="feature-card">
+        <h3>لینک اختصاصی</h3>
+        <p>لینک اختصاصی برای اشتراک‌گذاری با دیگران دریافت کنید</p>
+      </div>
+    </div>
+  </main>
+
+  <footer style="background-color:#2f3b42; color:#fbeed7; padding:1.5rem; font-size:1rem; font-weight:600; line-height:1.5;">
+  <p>ساخته شده توسط سونیه محمدی از CTI</p>
+  <p>تمامی حقوق این سایت نزد طراح محفوظ است</p>
+</footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loggedUser = localStorage.getItem('loggedUser');
+      const authSection = document.getElementById('authSection');
+      const welcomeSection = document.getElementById('welcomeSection');
+      const welcomeMessage = document.getElementById('welcomeMessage');
+
+      if (loggedUser) {
+        authSection.style.display = 'none';
+        welcomeSection.style.display = 'block';
+        welcomeMessage.textContent = `خوش آمدی ${loggedUser} 🌟`;
+      }
+
+      document.getElementById('loginBtn').addEventListener('click', () => {
+        window.location.href = 'login.html';
+      });
+
+      document.getElementById('signupBtn').addEventListener('click', () => {
+        window.location.href = 'signup.html';
+      });
+
+      document.getElementById('goEditorBtn').addEventListener('click', () => {
+        window.location.href = 'editor.html';
+      });
+
+      document.getElementById('logoutBtn').addEventListener('click', () => {
+        localStorage.removeItem('loggedUser');
+        window.location.reload();
+      });
+    });
+  </script>
+</body>
+</html>

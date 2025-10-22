@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نمایش پورتفولیو</title>
+  <link rel="stylesheet" href="css/view.css">
+</head>
+<body>
+  <header>
+    <h1>پورتفولیو</h1>
+    <nav aria-label="ناوبری">
+      <a href="index.html">خانه</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portfolioContent">
+      <!-- اطلاعات کاربر با JS نمایش داده می‌شود -->
+    </section>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get('user');
+    const portfolioContent = document.getElementById('portfolioContent');
+
+    if (!username) {
+      portfolioContent.innerHTML = "<p>هیچ کاربری مشخص نشده است.</p>";
+    } else {
+      const data = localStorage.getItem(`portfolio_${username}`);
+      if (!data) {
+        portfolioContent.innerHTML = "<p>پورتفولیو پیدا نشد.</p>";
+      } else {
+        const portfolio = JSON.parse(data);
+
+        let html = `
+          <div class="profile-header">
+            <img src="${portfolio.avatar || 'assets/default-avatar.png'}" alt="عکس پروفایل">
+            <div class="profile-info">
+              <h2>${portfolio.fullName || "نام وارد نشده"}</h2>
+              <h3>${portfolio.title || "عنوان وارد نشده"}</h3>
+              <p>${portfolio.bio || "بیو وارد نشده"}</p>
+            </div>
+          </div>
+
+          <section>
+            <h4>مهارت‌ها</h4>
+            ${portfolio.skills && portfolio.skills.length > 0
+              ? `<ul class="skills">${portfolio.skills.map(skill => `<li><img src="assets/skill-icon.png" alt="">${skill}</li>`).join('')}</ul>`
+              : `<p>هیچ مهارتی اضافه نشده است.</p>`}
+          </section>
+
+          <section>
+            <h4>پروژه‌ها</h4>
+            ${portfolio.projects && portfolio.projects.length > 0
+              ? portfolio.projects.map(project => `
+                  <div class="project">
+                    <h5>${project.name || "نام پروژه وارد نشده"}</h5>
+                    <p>${project.description || "توضیح پروژه وارد نشده"}</p>
+                    ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer">مشاهده پروژه</a>` : ""}
+                  </div>
+                `).join('')
+              : `<p>هیچ پروژه‌ای ثبت نشده است.</p>`}
+          </section>
+
+          <section class="contact">
+            <h4>اطلاعات تماس</h4>
+            <ul>
+              ${portfolio.contact?.email ? `<li>ایمیل: ${portfolio.contact.email}</li>` : ""}
+              ${portfolio.contact?.phone ? `<li>تلفن: ${portfolio.contact.phone}</li>` : ""}
+              ${portfolio.contact?.website ? `<li>وب‌سایت: <a href="${portfolio.contact.website}" target="_blank" rel="noopener noreferrer">${portfolio.contact.website}</a></li>` : ""}
+              ${(!portfolio.contact?.email && !portfolio.contact?.phone && !portfolio.contact?.website) ? `<li>اطلاعات تماس وارد نشده است.</li>` : ""}
+            </ul>
+          </section>
+        `;
+
+        portfolioContent.innerHTML = html;
+      }
+    }
+  </script>
+</body>
+</html>

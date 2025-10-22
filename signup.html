@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ثبت‌نام — پورتفولیو ساز</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <header>
+    <h1>ثبت‌نام</h1>
+    <nav aria-label="منوی صفحات">
+      <a href="index.html">خانه</a> |
+      <a href="login.html">ورود</a>
+    </nav>
+  </header>
+
+  <main>
+    <section aria-labelledby="signupTitle">
+      <h2 id="signupTitle">یک حساب کاربری بساز</h2>
+      <form id="signupForm" autocomplete="on" novalidate>
+        <div>
+          <label for="signupUsername">نام کاربری (انگلیسی/بدون فاصله)</label>
+          <input id="signupUsername" name="username" type="text" required aria-required="true" />
+        </div>
+
+        <div>
+          <label for="signupPassword">رمز عبور (حداقل 4 کاراکتر)</label>
+          <input id="signupPassword" name="password" type="password" required aria-required="true" />
+        </div>
+
+        <div>
+          <label for="signupName">نام کامل (اختیاری)</label>
+          <input id="signupName" name="name" type="text" />
+        </div>
+
+        <div>
+          <button type="submit">ثبت‌نام</button>
+        </div>
+
+        <div id="signupError" role="alert" aria-live="assertive" style="color:red"></div>
+        <div id="signupSuccess" role="status" aria-live="polite" style="color:green"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

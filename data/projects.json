@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "username": "zahra",
+      "name": "زهرا احمدی",
+      "job": "طراح وب",
+      "bio": "طراح رابط کاربری با تجربه در HTML و CSS.",
+      "previewLink": "view.html?user=zahra"
+    },
+    {
+      "username": "amir",
+      "name": "امیررضا سلطانی",
+      "job": "توسعه‌دهنده فرانت‌اند",
+      "bio": "علاقه‌مند به React و طراحی واکنش‌گرا.",
+      "previewLink": "view.html?user=amir"
+    }
+  ]
+}
